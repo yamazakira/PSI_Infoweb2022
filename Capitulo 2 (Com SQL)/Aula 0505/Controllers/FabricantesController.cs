@@ -14,12 +14,14 @@ namespace Aula_0505.Controllers
     {
         public EFContext context = new EFContext();
 
+        /*
         
         private static IList<Fabricante> fabricantes = new List<Fabricante>()
         {
             new Fabricante() { FabricanteId = 1, Nome = "LG"},
             new Fabricante() { FabricanteId = 2, Nome = "Microsoft"},
         };
+        */
         
 
         // GET: Fabricantes
