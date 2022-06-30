@@ -1418,7 +1418,7 @@ a.bg-danger:focus {
     color: #fff;
 }
 .page-header small, .col-xs-12 small{
-    color: lightgray;
+    color: white;
 }
 ul,
 ol {
