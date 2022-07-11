@@ -4,4 +4,4 @@
 |------------|----------------------|
 | Capitulo 1 | Inicio com cshtml, MVC5 |
 | Capitulo 2 | Inserção de SQL|
-| Capitulo 2 | Inserção de Bootstrap e JQuery DataTable |
+| Capitulo 3 | Inserção de Bootstrap e JQuery DataTable |
