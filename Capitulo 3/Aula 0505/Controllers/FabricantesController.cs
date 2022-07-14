@@ -125,6 +125,7 @@ namespace Aula_0505.Controllers
             Fabricante fabricante = context.Fabricantes.Find(id);
             context.Fabricantes.Remove(fabricante);
             context.SaveChanges();
+            TempData["Message"] = "Fabricante " + fabricante.Nome.ToUpper() + " foi removido";
 
             //Fabricante fabricante = fabricantes.Where(m => m.FabricanteId == id).First();
             //fabricantes.Remove(fabricante);
