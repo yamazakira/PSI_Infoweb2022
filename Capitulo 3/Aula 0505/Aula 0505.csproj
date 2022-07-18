@@ -153,6 +153,8 @@
     <Content Include="Content\DataTables-1.10.2\swf\copy_csv_xls_pdf.swf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Content\DataTables-1.10.2\css\dataTables.responsive.scss" />
+    <Content Include="Content\DataTables-1.10.2\css\dataTables.jqueryui.scss" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -161,8 +163,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\DataTables-1.10.2\css\dataTables.responsive.scss" />
-    <Content Include="Content\DataTables-1.10.2\css\dataTables.jqueryui.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
