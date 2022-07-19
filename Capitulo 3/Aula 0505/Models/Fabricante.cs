@@ -7,7 +7,7 @@ namespace Aula_0505.Models
 {
     public class Fabricante
     {
-        public Int32 FabricanteId { get; set; }
+        public long FabricanteId { get; set; }
         public string Nome { get; set; }
 
     }
