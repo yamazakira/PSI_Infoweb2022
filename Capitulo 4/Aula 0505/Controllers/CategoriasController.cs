@@ -100,8 +100,8 @@ namespace Aula_0505.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Categoria categoria = context.Categorias.Find(id);
-
+            Categoria categoria = context.Categorias.Where(f => f.CategoriaId == id).
+                Include("Produtos.Fabricante").First();
             if (categoria == null)
             {
                 return HttpNotFound();
