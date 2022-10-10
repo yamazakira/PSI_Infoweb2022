@@ -1,21 +1,50 @@
-﻿using Aula_0505.Context;
-using Modelo.Cadastros;
-using Modelo.Tabelas;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
+using Modelo.Tabelas;
+using Servico.Tabelas;
 
 namespace Aula_0505.Controllers
 {
     public class CategoriasController : Controller
     {
-        public EFContext context = new EFContext();
+        //public EFContext context = new EFContext();
+        //public ActionResult HtpNotFoundResult { get; private set; }
 
-        public ActionResult HtpNotFoundResult { get; private set; }
+        private CategoriaServico categoriaServico = new CategoriaServico();
+
+        private ActionResult ObterVisaoCategoriaId(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(
+                HttpStatusCode.BadRequest);
+            }
+            Categoria fabricante = categoriaServico.ObterCategoriaPorId((long)id);
+            if (fabricante == null)
+            {
+                return HttpNotFound();
+            }
+            return View(fabricante);
+        }
+
+        private ActionResult GravarCategoria(Categoria categoria)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    categoriaServico.GravarCategoria(categoria);
+                    return RedirectToAction("Index");
+                }
+                return View(categoria);
+            }
+            catch
+            {
+                return View(categoria);
+            }
+        }
 
         //private static IList<Categoria> categorias = new List<Categoria>()
         //{
@@ -29,17 +58,15 @@ namespace Aula_0505.Controllers
         // GET: Categorias
         public ActionResult Index()
         {
-            return View(
-                //categorias
-                context.Categorias.OrderBy(c => c.Nome)
-                );
+            return View(categoriaServico.ObterCategoriasClassificadasPorNome());
         }
-
         // GET: Create
         public ActionResult Create()
         {
             return View();
         }
+
+        // VOLTAR A PARTIR DAQUI AJKDSAD ASKABLFSBKLAFSAFSAFDSAFSAFSADVHFSADFJH
 
         // POST: Create
         [HttpPost]

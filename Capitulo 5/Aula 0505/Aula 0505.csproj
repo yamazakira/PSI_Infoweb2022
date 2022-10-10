@@ -203,7 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Context\EFContext.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\FabricantesController.cs" />
     <Compile Include="Controllers\ProdutosController.cs" />
@@ -235,6 +234,7 @@
     <Content Include="Views\Produtos\Delete.cshtml" />
     <Content Include="Views\Produtos\_PorFabricante.cshtml" />
     <Content Include="Views\Produtos\_PorCategoria.cshtml" />
+    <Content Include="Views\Produtos\_PartialDetailsContentPanel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -244,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Context\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
@@ -251,6 +252,10 @@
     <ProjectReference Include="..\Modelo\Modelo.csproj">
       <Project>{7c5ddf2c-4b80-4f4c-85d2-447a2fb5d5ae}</Project>
       <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servico\Servico.csproj">
+      <Project>{80fbb0d1-7fc2-4654-a072-016ebd273167}</Project>
+      <Name>Servico</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
