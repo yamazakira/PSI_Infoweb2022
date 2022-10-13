@@ -50,6 +50,7 @@ namespace Aula_0505.Controllers
         {
             return View();
         }
+
         // POST: Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -57,6 +58,7 @@ namespace Aula_0505.Controllers
         {
             return GravarFabricante(fabricante);
         }
+
         // GET: Edit
         public ActionResult Edit(long? id)
         {
