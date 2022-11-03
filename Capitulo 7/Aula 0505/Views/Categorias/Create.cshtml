@@ -1,4 +1,4 @@
-﻿@model Modelo.Cadastros.Fabricante
+﻿@model Modelo.Tabelas.Categoria
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,14 +12,14 @@
             Registro de uma NOVA CATEGORIA
         </div>
         <div class="panel-body">
-            <div class="form-horizontal">
+            <div class="form-horizontal">l
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     @Html.LabelFor(model => model.Nome, htmlAttributes: new
                     {
-                    @class = "control-label col-md-1"
+                    @class = "control-label col-md-3"
                     })
-                    <div class="col-md-11">
+                    <div class="col-md-9">
                         @Html.EditorFor(model => model.Nome, new
                         {
                             htmlAttributes =

@@ -13,9 +13,9 @@ namespace Modelo.Tabelas
         [DisplayName("Id")]
         public long CategoriaId { get; set; }
 
-        [StringLength(100, ErrorMessage = "O nome do produto precisa ter no mínimo 10 caracteres", MinimumLength = 10)]
+        [StringLength(100, ErrorMessage = "O nome do produto precisa ter no mínimo 10 caracteres", MinimumLength = 3)]
         [Required(ErrorMessage = "Informe o nome do fabricante")]
-        //[DisplayName("Nome da categoria")]
+        [DisplayName("Nome da categoria")]
         public string Nome { get; set; }
         public virtual ICollection<Produto> Produtos { get; set; }
     }
