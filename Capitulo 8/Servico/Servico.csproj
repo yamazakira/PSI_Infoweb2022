@@ -5,16 +5,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C5DDF2C-4B80-4F4C-85D2-447A2FB5D5AE}</ProjectGuid>
+    <ProjectGuid>{80FBB0D1-7FC2-4654-A072-016EBD273167}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Modelo</RootNamespace>
-    <AssemblyName>Modelo</AssemblyName>
+    <RootNamespace>Servico</RootNamespace>
+    <AssemblyName>Servico</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,10 +55,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastros\Fabricante.cs" />
-    <Compile Include="Cadastros\Produto.cs" />
+    <Compile Include="Cadastros\ProdutoServico.cs" />
+    <Compile Include="Cadastros\FabricanteServico.cs" />
+    <Compile Include="Tabelas\CategoriaServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tabelas\Categoria.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{7c5ddf2c-4b80-4f4c-85d2-447a2fb5d5ae}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistência\Persistencia.csproj">
+      <Project>{9656e5c2-a4f5-402d-bb98-3e91884d513b}</Project>
+      <Name>Persistencia</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
