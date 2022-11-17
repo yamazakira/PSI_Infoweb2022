@@ -38,9 +38,9 @@ namespace Aula_0505.Controllers
 
         // POST: Produtos/Create
         [HttpPost]
-        public ActionResult Create(Produto produto)
+        public ActionResult Create(Produto produto, HttpPostedFileBase logotipo = null, string chkRemoverImagem = null)
         {
-            return GravarProduto(produto);
+            return GravarProduto(produto, logotipo, chkRemoverImagem);
         }
 
         // GET: Produtos/Edit/5
@@ -172,7 +172,7 @@ namespace Aula_0505.Controllers
         {
             Produto produto = produtoServico.ObterProdutoPorId(id);
             FileStream fileStream = new FileStream(Server.MapPath(
-            "~/App_Data/" + produto.NomeArquivo), FileMode.Create,
+            "~/" + produto.NomeArquivo), FileMode.Create,
             FileAccess.Write);
             fileStream.Write(produto.Logotipo, 0,
             Convert.ToInt32(produto.TamanhoArquivo));
