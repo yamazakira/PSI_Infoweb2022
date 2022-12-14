@@ -20,6 +20,8 @@ new { enctype = "multipart/form-data" }))
                 @Html.HiddenFor(model => model.ProdutoId)
                 @Html.HiddenFor(model => model.LogotipoMimeType)
                 @Html.HiddenFor(model => model.Logotipo)
+                @Html.HiddenFor(model => model.NomeArquivo)
+                @Html.HiddenFor(model => model.TamanhoArquivo)
                 <div class="col-md-offset-7 col-md-5">
                     <div class="form-group">
                         @Html.TextBox("logotipo", "", new { type = "file" }) <br />
@@ -54,6 +56,7 @@ new { enctype = "multipart/form-data" }))
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Gravar alterações" class="btn btn-default" />
+                        @Html.ActionLink("Retornar para a listagem de PRODUTOS", "Index", null, new { @class = "btn btn-warning" })
                     </div>
                 </div>
             </div>
